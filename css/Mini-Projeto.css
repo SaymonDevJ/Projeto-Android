@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo&family=Bebas+Neue&family=Gloria+Hallelujah&family=Handjet:wght@100&family=Press+Start+2P&family=Roboto+Mono:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url("../Fonte/android_7.ttf") format("opentype");
+    font-weight: bolder;
+}
+
+:root{ /*Pseudo-Classe, Que vai pegar no elemento da pagina toda, é bom usar para colocar algo e usar la na frente, ou seja, se eu alterar uma cor aqui, ele altera nas outras cores do site*/
+
+    --cor0:#b2e6c9;
+    --cor1: #43d643;
+    --cor2: #506e33;
+    --cor3: #4a9c13;
+    --cor4: #2a550e;
+    --cor5: #023502;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+
+    --font-destaque:'Anton', sans-serif;
+
+    --font-android: 'Android',cursive;
+}
+
+body{
+    background-image: linear-gradient(#b4dbb4, #8cad8c);
+    font-family: var(--font-padrao);
+    
+}
+
+a.externo::after{
+    content: '\1F517';
+    font-size: 16px;
+}
+
+
+header{
+    background-image: linear-gradient(to bottom,#1a691a, #448a15);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+header > h1 {
+    color: #e6dada;
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.452);
+    text-transform: uppercase;
+
+}
+
+header > p {
+    color: #ece7e7;
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    margin:auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.452);
+}
+
+header a {
+    color: rgb(247, 220, 220);
+}
+
+header a:hover{
+    padding: 10px;
+    font-style: var(--font-padrao);
+}
+
+div.video{
+    background-color: rgb(14, 138, 14);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 52%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90% ;
+    height: 90%;
+}
+
+nav{
+    padding: 10px;
+    text-align: left;
+    color:white;
+    text-shadow: 0px 3px 3px black;
+}
+
+a{
+    color: #2daa42;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1em;
+
+}
+
+a:hover{
+    color: #74ad74;
+    border-radius: 10px ;
+    background-image: linear-gradient(to top, #113336,#04bf77);
+    font-weight: bold;
+    padding: 3px;
+    margin:3px;
+    transition-duration: 0.8s;
+}
+
+main {
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    margin-bottom: 20px ;
+    box-shadow:  0px 0px 12px rgba(0, 0, 0, 0.24);
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
+
+}
+
+
+main h1{
+    color:var(--cor4) ;
+    font-family: var(--font-android);
+    text-align: center;
+    
+}
+
+main h2{
+    font-family: var(--font-android);
+    background-image: linear-gradient(to right, #177a4c, rgba(83, 94, 83, 0));
+    color: rgb(4, 61, 4) ;
+    padding: 5px;
+    font-size: 25px; 
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+    
+}
+
+main img.Pequeno{
+    padding: 20px;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+aside {
+    background-color: #04bf77;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 7px rgba(0, 0, 0, 0.11);
+}
+
+aside a {
+    color: white;
+    padding: 10px;
+}
+
+aside a:hover{
+    background-image: linear-gradient(#023502,rgba(255, 255, 255, 0.116));
+    color: white;
+}
+
+aside > h3{
+    background-color: #023502;
+    color: white;
+    margin: -10px -10px 0px -10px; /*Margin negativa serve pra vazar a margin!*/
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px ;
+    text-align: center;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /*eSPAÇAMENTO ENTRE A IMAGEM E OS TEXOS*/
+    list-style-position: inside; /*Posição da polinha INSIDE=DENTRO/OUTSIDE=FORA*/
+    columns: 2; /*Total de Colunas*/
+    padding: 20px; 
+    
+}
+
+footer {
+    background: var(--cor5);
+    color: #dbd4c6;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+footer a{ 
+    color:rgb(11, 83, 53);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+    background-image: linear-gradient(to bottom, #16a155, rgba(255, 255, 255, 0.336));
+}
+
+.final {
+    background-image: linear-gradient(#a59e9e52, #96909007);
+    font-weight: bolder;
+}
